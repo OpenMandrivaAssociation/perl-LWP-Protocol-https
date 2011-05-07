@@ -15,6 +15,7 @@ BuildRequires: perl(IO::Socket::SSL)
 BuildRequires: perl(LWP::UserAgent)
 BuildRequires: perl(Mozilla::CA)
 BuildRequires: perl(Net::HTTPS)
+BuildRequires: perl(HTTP::Request)
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
