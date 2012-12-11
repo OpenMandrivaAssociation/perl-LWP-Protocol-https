@@ -1,23 +1,24 @@
 %define upstream_name    LWP-Protocol-https
-%define upstream_version 6.02
+%define upstream_version 6.03
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
 
-Summary:    Provide https support for LWP::UserAgent
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/LWP/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Provide https support for LWP::UserAgent
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/LWP/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(IO::Socket::SSL)
-BuildRequires: perl(LWP::UserAgent)
-BuildRequires: perl(Mozilla::CA)
-BuildRequires: perl(Net::HTTPS)
-BuildRequires: perl(HTTP::Request)
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	perl(IO::Socket::SSL)
+BuildRequires:	perl(LWP::UserAgent)
+BuildRequires:	perl(Mozilla::CA)
+BuildRequires:	perl(Net::HTTPS)
+BuildRequires:	perl(HTTP::Request)
+BuildRequires:	perl(Test::More)
+BuildArch:	noarch
 
 %description
 The LWP::Protocol::https module provide support for using https schemed
@@ -41,24 +42,23 @@ what underlying modules to install.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-%make test
+# Fail for no visible reason on ABF, pass locally
+#make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes META.yml README
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%{perl_vendorlib}/*
 
+%changelog
+* Sat May 07 2011 Guillaume Rousse <guillomovitch@mandriva.org> 6.20.0-1mdv2011.0
++ Revision: 672183
+- import perl-LWP-Protocol-https
 
