@@ -1,15 +1,15 @@
 %define upstream_name LWP-Protocol-https
-%define upstream_version 6.03
+%define upstream_version 6.04
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 6.04
+Release:	1
 
 Summary:	Provide https support for LWP::UserAgent
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/LWP/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/LWP/LWP-Protocol-https-6.04.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(IO::Socket::SSL)
@@ -61,4 +61,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Sat May 07 2011 Guillaume Rousse <guillomovitch@mandriva.org> 6.20.0-1mdv2011.0
 + Revision: 672183
 - import perl-LWP-Protocol-https
+
 
