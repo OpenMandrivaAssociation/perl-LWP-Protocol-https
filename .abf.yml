@@ -1,4 +1,5 @@
 removed_sources:
   LWP-Protocol-https-6.03.tar.gz: f9b54d47b25e79a021b1dc74d548941d02839275
-sources:
   LWP-Protocol-https-6.04.tar.gz: 5a63cb409ff4ba34006d5a45120e7facc52dc837
+sources:
+  LWP-Protocol-https-6.07.tar.gz: 2517535f40d6a5a4a1524f3a7bedf0a1763871de

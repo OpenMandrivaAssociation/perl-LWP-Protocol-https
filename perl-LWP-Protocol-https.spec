@@ -1,15 +1,15 @@
 %define upstream_name    LWP-Protocol-https
-%define upstream_version 6.04
+%define upstream_version 6.07
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 6.04
-Release:	3
+Version:	%perl_convert_version 6.07
+Release:	1
 
 Summary:	Provide https support for LWP::UserAgent
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/LWP/LWP-Protocol-https-6.04.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/LWP/LWP-Protocol-https-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(IO::Socket::SSL)
