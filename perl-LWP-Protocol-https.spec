@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 6.07
-Release:	2
+Release:	3
 
 Summary:	Provide https support for LWP::UserAgent
 License:	GPL+ or Artistic
