@@ -8,7 +8,7 @@ Release:	3
 Summary:	Provide https support for LWP::UserAgent
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/LWP/LWP-Protocol-https-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
