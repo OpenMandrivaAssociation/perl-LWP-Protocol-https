@@ -1,15 +1,13 @@
 %define upstream_name    LWP-Protocol-https
-%define upstream_version 6.07
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 6.07
-Release:	3
+Version:	6.07
+Release:	4
 
 Summary:	Provide https support for LWP::UserAgent
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/LWP/LWP-Protocol-https-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/LWP/LWP-Protocol-https-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -40,7 +38,7 @@ their dependency on LWP::Protocol::https and will no longer need to know
 what underlying modules to install.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
