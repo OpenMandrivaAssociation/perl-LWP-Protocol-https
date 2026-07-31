@@ -1,7 +1,7 @@
 %define upstream_name    LWP-Protocol-https
 Name:		perl-%{upstream_name}
-Version:	6.07
-Release:	4
+Version:	6.17
+Release:	1
 
 Summary:	Provide https support for LWP::UserAgent
 License:	GPL+ or Artistic
@@ -38,7 +38,7 @@ their dependency on LWP::Protocol::https and will no longer need to know
 what underlying modules to install.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n LWP-Protocol-https-6.17
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
