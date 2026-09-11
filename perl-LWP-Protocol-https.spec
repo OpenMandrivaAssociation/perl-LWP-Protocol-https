@@ -52,7 +52,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %makeinstall_std
 
 %files
-%doc Changes META.yml README
+%doc Changes META.yml
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 
